@@ -1,2 +1,40 @@
-holaaaaaaa
-Esta esta es una prueba de demostracion. 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Piedra, papel o tijeras</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <header align="center">
+      <h1>Piedra, Papel o Tijeras</h1>
+    </header>
+
+    <div class="marcador">
+      <div class="user-label badge">User</div>
+      <div class="comp-label badge">PC</div>
+      <span id="user-score">0</span> :
+      <span id="cpu-score">0</span>
+    </div>
+
+    <div class="opciones">
+      <div class="imagen" id="r">
+        <img src="imagenes/rock.png" alt="">
+      </div>
+      <div class="imagen" id="p">
+        <img src="imagenes/paper.png" alt="">
+      </div>
+      <div class="imagen" id="s">
+        <img src="imagenes/scissors.png" alt="">
+      </div>
+    </div>
+    <div class="btnContenedor">
+        <button id="restart" class="restart-btn">Reiniciar Juego</button>
+    </div>
+    <div class="modal">
+      <div id="result" class="modal-content"></div>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
