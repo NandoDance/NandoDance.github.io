@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style5.css">
+
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar" style="
+             background-color: #343a40;
+             min-width: 270px;
+             max-width: 270px;">
+            <div class="sidebar-header">
+                <h3>HEREDROGRAMA VIRTUAL</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <h3>&nbsp;&nbsp;Índice</h3>
+                <li><a href="simbologia.html">
+                        &nbsp;Simbología
+                    </a></li>
+                <li><a href="#">
+                        &nbsp;Completar el &nbsp;heredograma
+                    </a></li>
+                <li><a href="Introduccion.html">
+                    &nbsp;Introducción
+                </a></li>
+                <li><a href="#">
+                        &nbsp;Ejemplos
+                    </a></li>
+                <li><a href="#">
+                        &nbsp;Bibliografía</a>
+                </li>
+            </ul>
+            <br/><br/>
+            <h3>&nbsp;&nbsp;Integrantes</h3>
+            
+            <p>&nbsp;&nbsp;&nbsp;
+                Diana Caizapasto
+                <br/>&nbsp;&nbsp;&nbsp;
+                Alisson Calero<br/>
+                &nbsp;&nbsp;&nbsp;
+                Linda Chapi
+                <br/>&nbsp;&nbsp;&nbsp;
+                Mishel Guerrón<br/>
+                &nbsp;&nbsp;&nbsp;
+                Diana Jácome
+            </p>
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse" >
+                    <h2 class="titulo">HEREDROGRAMA VIRTUAL</h2> 
+                </div>
+            </div>
+            <div class="rela-block content-container">
+                <h2>Simbología</h2>
+                <h3>Genealogía</h3>
+                <p>Símbolos más usados.</p>
+                <!-- Simbolos -->
+                <div class="rela-block tab-container">
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/masculino.png">
+                            <p></p>
+                            <p class="light">Masculino</p>
+                        </div>  
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/femenino.png">
+                            <p></p>
+                            <p class="light">Femenino</p>
+                        </div>
+                    </div> 
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/fallecido.png">
+                            <p></p>
+                            <p class="light">Fallecido</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/generoDesc.png">
+                            <p></p>
+                            <p class="light">Género desconocido</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/abortoEsp.png">
+                            <p></p>
+                            <p class="light">Aborto espontáneo</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/propositoProb.png">
+                            <p></p>
+                            <p class="light">Propósito o probando</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/union.png">
+                            <p></p>
+                            <p class="light">Unión</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/consanguinidad.png">
+                            <p></p>
+                            <p class="light">Consanguinidad</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/portadorMas.png">
+                            <p></p>
+                            <p class="light">Portador masculino</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/portadorFem.png">
+                            <p></p>
+                            <p class="light">Portador femenino</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/masculinoAfec.png">
+                            <p></p>
+                            <p class="light">Masculino afectado</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/femeninoAfec.png">
+                            <p></p>
+                            <p class="light">Femenino afectado</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/unionIleg.png">
+                            <p></p>
+                            <p class="light">Unión ilegítima</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/padresHermanos.png">
+                            <p></p>
+                            <p class="light">Padres e hijos</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/embarazo.png">
+                            <p></p>
+                            <p class="light">Embarazo</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/hijoAdop.png">
+                            <p></p>
+                            <p class="light">Hijo adoptado</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/hijaAdop.png">
+                            <p></p>
+                            <p class="light">Hija adoptada</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/matrimonioSinHijos.png">
+                            <p></p>
+                            <p class="light">Matrimonio sin hijos</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/gemelosMon.png">
+                            <p></p>
+                            <p class="light">Gemelos Monocigóticos</p>
+                        </div>
+                    </div>
+                    <div class="rela-inline tab">
+                        <div class="abs-center">
+                            <img src="images/gemelosDic.png">
+                            <p></p>
+                            <p class="light">Gemelos dicigóticos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

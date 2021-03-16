@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style5.css">
+
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar" style="
+             background-color: #343a40;
+             min-width: 270px;
+             max-width: 270px;">
+            <div class="sidebar-header">
+                <h3>HEREDROGRAMA VIRTUAL</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <h3>&nbsp;&nbsp;Índice</h3>
+                <li><a href="simbologia.html">
+                        &nbsp;Simbología
+                    </a></li>
+                <li><a href="#">
+                        &nbsp;Completar el &nbsp;heredograma
+                    </a></li>
+                <li><a href="Introduccion.html">
+                    &nbsp;Introducción
+                </a></li>
+                <li><a href="#">
+                        &nbsp;Ejemplos
+                    </a></li>
+                <li><a href="#">
+                        &nbsp;Bibliografía</a>
+                </li>
+            </ul>
+            <br/><br/>
+            <h3>&nbsp;&nbsp;Integrantes</h3>
+            
+            <p>&nbsp;&nbsp;&nbsp;
+                Diana Caizapasto
+                <br/>&nbsp;&nbsp;&nbsp;
+                Alisson Calero<br/>
+                &nbsp;&nbsp;&nbsp;
+                Linda Chapi
+                <br/>&nbsp;&nbsp;&nbsp;
+                Mishel Guerrón<br/>
+                &nbsp;&nbsp;&nbsp;
+                Diana Jácome
+            </p>
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse" >
+                    <h2 class="titulo">HEREDROGRAMA VIRTUAL</h2> 
+                </div>
+            </div>
+            <div class="rela-block content-container">
+                <h2>Introducción</h2>
+                <div class="tab long">
+                    <!-- 1Div -->
+                    <h3 style="color: black;
+                               text-align: justify;">CONCEPTOS BÁSICOS</h3>
+                    <p  style="color: black;
+                               text-align: justify;">Los genes son portadores de esta información hereditaria, es decir, son la unidad funcional de herencia. Forman un "proyecto de construcción" para determinados componentes de los que están formados nuestro cuerpo y que se reparten en 23 pares de cromosomas que se encuentran en el núcleo de cada célula. En cada célula del cuerpo humano se encuentran estos 23 pares de cromosomas, es decir, 23x2=46 cromosomas en total. Una expceción la forman los óvulos y los espermatozoides que son células especiales ya que sólo tienen 23 cromosomas. Cuando un óvulo es fecundado por un espermatozoide surge una nueva célula con una dotación cromosómica completa con 23 pares de cromosomas, cada par formado por un cromosoma heredado de la madre y un cromosoma heredado del padre. </p>
+                    <p  style="color: black;
+                               text-align: justify;">A los 22 primeros pares se les llama autosomas, siendo idénticos para el hombre y la mujer. El par 23 lo forman los gonosomas o cromosomas sexuales (X e Y) determinantes del sexo de las personas. Se llaman así porque las mujeres tienen dos cromosomas X (46,XX) y los hombres tienen uno de cada uno (46,XY). Los cromosomas estan formados por ácido desoxirribonucleico ADN (en inglés: Deoxyribounucleic acid = DNA), que a su vez se subdivide en genes. Así podemos decir que un gen es un trozo de ADN que contiene la información necesaria para la producción de una proteína que llevará a cabo una función específica en la célula.</p>
+        
+                    <div class="line"></div>
+                    
+                    <!-- 2Div -->        
+                    <h3 style="color: black;
+                               text-align: justify;">HERENCIA AUTOSÓMICA DOMINANTE</h3>
+                    <UL>
+                        <LI><p  style="color: black;">El gen afectado está en cualquiera de los cromosomas 1 -22.</p>
+                        <LI><p  style="color: black;">Fenotipo aparece en cada generación.</p>
+                        <LI><p  style="color: black;">Cada afectado, proviene de un progenitor con la alteración.</p>
+                        <LI><p  style="color: black;">Hijos de afectados tienen un riesgo de 50% de haber heredado el gen alterado.</p>
+                    </UL>
+                    <div class = "tab-container">
+                        <img src="images/herenciaAutosomica.png" title="HERENCIA AUTOSÓMICA DOMINANTE">
+                    </div>    
+                    <h3 style="color: black;
+                            text-align: justify;">PATOLOGÍAS FRECUENTES</h3>
+                    <img src="images/sindromeMarfan.png" class="derecha">
+                    <UL>
+                        <LI><p  style="color: black;">Acondroplasia.</p>
+                        <LI><p  style="color: black;">S. de Marfan. </p>
+                        <LI><p  style="color: black;">Neurofibromatosis.</p>
+                        <LI><p  style="color: black;">Esclerosis Tuberosa.</p>
+                        <LI><p  style="color: black;">Distrofia Muscular Facio/escápulo/humeral. </p>
+                        <LI><p  style="color: black;">Enfermedad de Huntington.</p>
+                        <LI><p  style="color: black;">Cáncer (Mama, Colon…) </p>
+                    </UL>
+                    <p>br;</p>
+                    <div class="line"></div>
+
+                    <!-- 3Div -->      
+                    <h3 style="color: black;
+                               text-align: justify;">HERENCIA AUTOSÓMICA RECESIVA</h3>
+                    <UL>
+                        <LI><p  style="color: black;">Presenta un patrón horizontal.</p>
+                        <LI><p  style="color: black;">Hombres y mujeres afectados.</p>
+                        <LI><p  style="color: black;">Afectados tendrán un genotipo : aa</p>
+                        <LI><p  style="color: black;">Los individuos normales serán AA ó Aa </p>
+                    </UL>
+                    <div class = "tab-container">
+                        <img src="images/herenciaAutosomicaRecesiva.png" title="HERENCIA AUTOSÓMICA RECESIVA">
+                    </div>
+
+                    <UL>
+                        <LI><p  style="color: black;">Progenitores heterocigotos portadores asintomáticos.</p>
+                        <LI><p  style="color: black;">Riesgo de recibir un alelo mutado de c/progenitor es 25%</p>
+                        <LI><p  style="color: black;">Por lo general los progenitores del propósito son consanguíneos.</p>
+                    </UL>
+                    <div class = "tab-container">
+                        <img src="images/herenciaAutosomicaRecesiva2.png">
+                    </div>
+
+                    <h3 style="color: black;
+                    text-align: justify;">PATOLOGÍAS FRECUENTES</h3>
+                    <UL>
+                        <LI><p  style="color: black;">Fibrosis quística </p>
+                        <LI><p  style="color: black;">Anemia de células falciformes </p>
+                    </UL>
+                    <div style="margin: auto auto auto 20px;">
+                        <img src="images/herenciaAutosomicaRecesiva3.jpg" class="derecha">
+                        <img src="images/herenciaAutosomicaRecesiva4.jpg" class="izquierda" width="284px" height="227px">
+                    </div>
+                    <p>br;</p>   <p>br;</p>
+                    <p>br;</p>   <p>br;</p>
+                    <p>br;</p>   <p>br;</p>
+
+                    <div class="line"></div>
+                        
+                    <!-- 3Div -->        
+                    <h3 style="color: black;
+                               text-align: justify;">HERENCIA RECESIVA LIGADA AL SEXO DEL CROMOSOMA X</h3>
+                    <UL>
+                        <LI><p  style="color: black;">Se expresa fenotípicamente en todos los varones que la reciben.</p>
+                        <LI><p  style="color: black;">El gen responsable se transmite del varón afectado a través de todas sus hijas</p>
+                        <LI><p  style="color: black;">Los hijos varones de mujeres portadoras, tienen 50% de riesgo de heredar el gen mutado. </p>
+                    </UL>
+                    <div class = "tab-container">
+                        <img src="images/herenciaX.png" title="HERENCIA AUTOSÓMICA DOMINANTE">
+                    </div>  
+
+                    <h3 style="color: black;
+                    text-align: justify;">ESCENARIOS TÍPICOS</h3>
+                    <p  style="color: black;
+                               text-align: justify;">En cada embarazo, si la madre es una portadora de cierta enfermedad (ella tiene solo un cromosoma X anormal) y el padre no es un portador de la enfermedad, el resultado esperado es:</p>
+                    <UL>
+                        <LI><p  style="color: black;">25% de probabilidad de un varón sano.</p>
+                        <LI><p  style="color: black;">25% de probabilidad de un varón con la enfermedad.</p>
+                        <LI><p  style="color: black;">25% de probabilidad de una niña sana.</p>
+                        <LI><p  style="color: black;">25% de probabilidad de una niña portadora sin la enfermedad.</p>
+                    </UL>
+
+                    <p  style="color: black;
+                    text-align: justify;">Si el padre tiene la enfermedad y la madre no es una portadora, los resultados esperados son:</p>
+                    <UL>
+                        <LI><p  style="color: black;">50% de probabilidad de tener un varón sano.</p>
+                        <LI><p  style="color: black;">50% de probabilidad de tener una niña sin la enfermedad, quien es portadora.</p>
+                    </UL>
+
+                    <p  style="color: black;
+                    text-align: justify;">Esto significa que ninguno de los hijos presentaría en realidad signos de la enfermedad, pero el rasgo se puede heredar a los nietos.</p>
+                   
+                    <p>br;</p>
+                    <h3 style="color: black;
+                            text-align: justify;">TRASTORNOS RECESIVOS LIGADOS AL CROMOSOMA X EN LAS MUJERES</h3>
+                    
+                    <p  style="color: black;
+                    text-align: justify;">Las mujeres pueden adquirir un trastorno recesivo ligado al cromosoma X, pero esto es muy poco frecuente. Se requeriría un gen anormal en el cromosoma X de cada uno de los padres, ya que una mujer tiene dos cromosomas X. Esto podría ocurrir en los siguientes dos escenarios:</p>
+                    
+                    <p  style="color: black;
+                    text-align: justify;">En cada embarazo, si la madre es una portadora del gen y el padre tiene la enfermedad, los resultados esperados son:</p>
+                   
+                   <img src="images/herenciaX2.png" class="derecha" width="300px" height="350px">
+                    <UL>
+                        <LI><p  style="color: black;">25% de probabilidad de un varón sano.</p>
+                        <LI><p  style="color: black;">25% de probabilidad de una niña portadora. </p>
+                        <LI><p  style="color: black;">25% de probabilidad de un varón con la enfermedad.</p>
+                        <LI><p  style="color: black;">25% de probabilidad de una niña con la enfermedad.</p>
+                    </UL>
+
+                    <p  style="color: black;
+                    text-align: justify;">Si tanto el padre como la madre tienen la enfermedad, los resultados esperados son:</p>
+                    <UL>
+                        <LI><p  style="color: black;">100% de probabilidad de que el hijo tenga la enfermedad, sea niño o niña</p>
+                    </UL>
+
+                    <p  style="color: black;
+                    text-align: justify;">Las probabilidades de cualquiera de estos dos escenarios son tan bajas que, algunas veces, a las enfermedades recesivas ligadas al cromosoma X se las llama enfermedades únicamente masculinas. Sin embargo, esto no es técnicamente correcto.</p>
+                    
+                    <p  style="color: black;
+                    text-align: justify;">Las portadoras femeninas pueden tener un cromosoma X normal que está anormalmente inactivado. Esto se denomina "inactivación sesgada del cromosoma X". Estas mujeres pueden tener síntomas similares a los de los hombres o pueden tener solo síntomas leves.</p>
+                    
+                    <h3 style="color: black;
+                    text-align: justify;">PATOLOGÍAS FRECUENTES</h3>
+                    <p  style="color: black;
+                    text-align: justify;">Hemofilia</p>                    
+                    <div style="text-align: center;">
+                        <img src="images/hemofilia.jpg">
+                    </div>
+
+                    <p  style="color: black;
+                    text-align: justify;">Distrofia muscular de Duchenne</p>                    
+                    <div style="text-align: center;">
+                        <img src="images/distrofiaMuscular.jpg">
+                    </div>
+
+                    <div class="line"></div>
+
+                    <!-- 4Div -->        
+                    <h3 style="color: black;
+                               text-align: justify;">HERENCIA  DOMINANTE LIGADA AL SEXO DEL CROMOSOMA X</h3>
+                    <UL>
+                        <LI><p  style="color: black;">Varones afectados casados con mujeres normales, no tienen hijos afectados, pero si hijas afectadas.</p>
+                        <LI><p  style="color: black;">Los hijos varones de mujeres afectadas, tienen 50% de riesgo de heredar el fenotipo.</p>
+                    </UL>
+                    <div class = "tab-container">
+                        <img src="images/herenciaLigadaX.png" title="HERENCIA AUTOSÓMICA DOMINANTE">
+                    </div> 
+                    <p  style="color: black;
+                    text-align: justify;">Para un trastorno dominante ligado al cromosoma X: Si el padre porta el gen anormal X, todas sus hijas heredarán la enfermedad y ninguno de sus hijos varones la padecerá. Esto es porque las hijas siempre heredan el cromosoma X de su padre. Si la madre porta el gen anormal X, la mitad de sus hijos (hijas e hijos) heredarán la tendencia a la enfermedad.</p>  
+
+                    <p  style="color: black;
+                    text-align: justify;">Por ejemplo, si hay cuatro hijos (dos varones y dos mujeres) y la madre está afectada (ella tiene un cromosoma X anormal y tiene la enfermedad), pero el padre no tiene el gen X anormal, las probabilidades esperadas son:</p>  
+                
+                    <UL>
+                        <LI><p  style="color: black;">Dos hijos (una mujer y un varón) tendrán la enfermedad.</p>
+                        <LI><p  style="color: black;">Dos hijos (una mujer y un varón) no tendrán la enfermedad.</p>
+                    </UL>
+
+                    <p  style="color: black;
+                    text-align: justify;">Si hay cuatro hijos (dos mujeres y dos varones) y el padre está afectado (tiene un X anormal y tiene la enfermedad), pero la madre no, las probabilidades esperadas son:</p>  
+                
+                    <UL>
+                        <LI><p  style="color: black;">Dos niñas tendrán la enfermedad.</p>
+                        <LI><p  style="color: black;">Dos niños no tendrán la enfermedad.</p>
+                    </UL>
+
+                    <p  style="color: black;
+                    text-align: justify;">Estas probabilidades no significan que los niños que hereden el cromosoma X anormal mostrarán síntomas graves de la enfermedad. La posibilidad de heredar es nueva con cada concepción, así que esto puede realmente no ocurrir en una familia. Algunos trastornos relacionados con el gen X dominante son tan graves que los varones con el trastorno genético pueden morir antes del nacimiento. Por lo tanto, puede haber un aumento en la tasa de aborto espontáneo en la familia o menos niños varones de lo esperado.</p>  
+               
+                    <h3 style="color: black;
+                    text-align: justify;">PATOLOGÍAS FRECUENTES</h3>
+                    <h4  style="color: black;">Síndrome de RETT</h4>
+                    <UL>
+                        <LI><p  style="color: black;">Desarrollo psicomotor normal hasta 6-18 meses.</p>
+                        <LI><p  style="color: black;">Microcefalia.</p>
+                        <LI><p  style="color: black;">Deambulacion atáxica.</p>
+                        <LI><p  style="color: black;">Ausencia de lenguaje.</p>
+                        <LI><p  style="color: black;">Retraso mental severo.</p>
+                        <LI><p  style="color: black;">Prevalencia en mujeres: 1/10000 – 1/15000.</p>          
+                        <LI><p  style="color: black;">90% son esporádicos.</p>
+                        <LI><p  style="color: black;">Etiología: en el 60% mutación en la región codificante del gen MeCP2 en Xq28.</p>
+                        <LI><p  style="color: black;">Herencia dominante ligada al X , letal en el varón.</p>
+                        <LI><p  style="color: black;">Expresion variable en niñas (Inactivación del X).</p>        
+                    </UL>
+                    <div class = "tab-container">
+                        <img src="images/sindromeRETT.png" title="Síndrome de RETT">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
