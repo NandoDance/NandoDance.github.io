@@ -3,19 +3,11 @@
 	display: block;
 	position: relative;
 	margin: auto;
-	top: ;
-	left: ;
-	right: ;
-	bottom: ;
   }
   .rela-inline {
 	display: inline-block;
 	position: relative;
 	margin: auto;
-	top: ;
-	left: ;
-	right: ;
-	bottom: ;
   }
   .abs-center {
 	display: $x;
@@ -43,6 +35,10 @@
 	margin: 0 auto 40px;
 	color: white;
 	font-family: 'Montserrat';
+    font-size: 0.9em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
   }
   h2 {
 	font-family: 'Montserrat';
