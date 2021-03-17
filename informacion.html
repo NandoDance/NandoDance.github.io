@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Información</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/style5.css">
+
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar" style="
+             background-color: #343a40;
+             min-width: 240px;
+             max-width: 240px;">
+            <div class="sidebar-header">
+                <h3>HEREDROGRAMA VIRTUAL</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <h3>&nbsp;&nbsp;Índice</h3>
+                <li><a href="simbologia.html">
+                        &nbsp;Simbología
+                    </a></li>
+                <li><a href="heredograma.html">
+                        &nbsp;Arma tu heredograma
+                    </a></li>
+                <li><a href="Introduccion.html">
+                    &nbsp;Introducción
+                </a></li>
+                <li><a href="ejercicios.html">
+                        &nbsp;Ejercicios 
+                    </a></li>
+                <li><a href="informacion.html">
+                        &nbsp;Links para más información</a>
+                </li>
+            </ul>
+            <br/><br/>
+            <h3>&nbsp;&nbsp;Integrantes</h3>
+            
+            <p style="color: white;">&nbsp;&nbsp;&nbsp;
+                Diana Caizapasto
+                <br/>&nbsp;&nbsp;&nbsp;
+                Alisson Calero<br/>
+                &nbsp;&nbsp;&nbsp;
+                Linda Chapi
+                <br/>&nbsp;&nbsp;&nbsp;
+                Mishel Guerrón<br/>
+                &nbsp;&nbsp;&nbsp;
+                Diana Jácome
+            </p>
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse" >
+                    <h2 class="titulo">HEREDROGRAMA VIRTUAL</h2> 
+                </div>
+            </div>
+            <div class="rela-block content-container">
+                <h2>Links</h2>
+                <div class="tab long">
+                    <!-- 1Div -->
+                    <h3 style="color: black;
+                               text-align: justify;">Encuentra más informacion en los siguientes links</h3>
+                    <p  style="color: black;
+                               text-align: justify;">Basta M., Pandya A., Genética, herencia ligada al cromosoma X. StatPearls [Internet].2020. Disponible en: </p>
+                    <a  href="https://pubmed.ncbi.nlm.nih.gov/32491315/" target="_blank">
+                        <p>https://pubmed.ncbi.nlm.nih.gov/32491315</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
