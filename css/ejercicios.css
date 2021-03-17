@@ -1,0 +1,19 @@
+input.ejer  {
+    width: 120px; 
+    height: 50px;
+    background:#15c8ff;
+    border-radius: 6px;
+}
+input.peque  {
+    width: 57px; 
+    height: 50px;
+    background:#15c8ff;
+    border-radius: 6px;
+}
+label.espacio{
+    width: 100px; 
+}
+label.font{
+    font-size: 1.5em;
+    font-family: 'Montserrat';
+}

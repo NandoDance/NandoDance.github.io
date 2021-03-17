@@ -32,40 +32,43 @@
   }
   p,
   dt {
-	margin: 0 auto 40px;
 	color: white;
 	font-family: 'Montserrat';
     font-size: 0.9em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+	color: black;
   }
   h2 {
 	font-family: 'Montserrat';
-	font-size: 45px;
+	font-size: 40px;
 	letter-spacing: 3px;
 	font-weight: 400;
 	line-height: 60px;
-	margin: 0 auto 20px;
 	color: yellow;
   }
   h3 {
 	font-family: 'Montserrat';
-	font-size: 25px;
+	font-size: 20px;
 	letter-spacing: 1px;
 	font-weight: 400;
 	line-height: 30px;
-	margin: 0 auto 20px;
 	text-transform: uppercase;
 	color: white;
   }
   h4 {
 	font-family: 'Montserrat';
+	font-size: 15px;
   }
   p.light,
   h2.light,
   h3.light {
 	color: #aaa;
+  }
+  p.ejer {
+	font-family: 'Montserrat';
+    font-size: 1.5em;
+	float:left;
   }
   h2.titulo {
 	color: rgb(0, 0, 0);
@@ -74,7 +77,7 @@
   .content-container {
 	width: 100%;
 	max-width: 1400px;
-	padding: 10px 10px 10px 50px;;
+	padding: 10px 10px 10px 10px;;
   }
   .content-container.menu-open {
 	padding-left: 370px;
@@ -132,13 +135,13 @@
   }
   @media screen and (max-width: 881px) {
 	.tab {
-	  width: 75% !important;
-	  margin: 10px auto;
+	  width: 100% !important;
+	  margin: 10px 10px 10px 10px;
 	}
   }
   @media screen and (max-width: 700px) {
 	.content-container {
-	  padding: 10px 10px 10px 50px;
+	  padding: 10px 10px 10px 10px;
 	}
   }
 
@@ -148,4 +151,42 @@
   img.izquierda {
 	float: left;
   }
-  
+
+/* ---------------------------------------------------
+    EJERCICIOS
+----------------------------------------------------- */
+input.ejer  {
+    width: 120px; 
+    height: 50px;
+    background:#15c8ff;
+    border-radius: 6px;
+}
+input.peque  {
+    width: 57px; 
+    height: 50px;
+    background:#15c8ff;
+    border-radius: 6px;
+}
+label{
+	font-family: 'Montserrat';
+	font-size: 0.9em;
+}
+label.espacio{
+    width: 100px; 
+}
+label.font{
+    font-size: 1.5em;
+}
+/* ---------------------------------------------------
+    HEREDOGRAMA
+----------------------------------------------------- */
+.disabled {
+	color: grey;
+}
+.popup_selection, .addpartner, .addparents, .delete, .settings {
+	cursor: pointer;
+}
+.addsibling, .addchild {
+	cursor: default;
+}
+svg {overflow:hidden}
