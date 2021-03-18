@@ -23,7 +23,6 @@
 </head>
 
 <body>
-
     <div class="wrapper">
         <!-- Sidebar Holder -->
         <nav id="sidebar" style="
@@ -87,24 +86,29 @@
         <!-- 1er ejercicio -->
         <div class="tab long">
             <h3 style="color: black;">HERENCIA RECESIVA LIGADA AL SEXO DEL CROMOSOMA X</h3>
-            <p>Un gen recesivo ligado al cromosoma X determina la hemofilia (h) en la especie humana. Una mujer portadora de hemofilia se empareja con un hombre no hemofílico. ¿Cuál es la probabilidad de que tengan un hijo varón hemofílico?</p>
-            
+            <p>Un gen recesivo ligado al cromosoma X determina la hemofilia (<sub>h</sub>) en la especie humana. Una mujer portadora de hemofilia se empareja con un hombre no hemofílico. ¿Cuál es la probabilidad de que tengan un hijo varón hemofílico?</p>
+            <hr>
             <div>
-                <form name="ejercicios1A">
-                    <hr>
-                    <label style="margin-right: 42px;">Mujer portadora:</label>
-                    <select name="opcionesMujerPor" id="cmbx1">
-                    <option value="XhXh">XhXh</option>
-                    <option value="XhXH">XhXH</option>
-                    <option value="XX">XX</option>
-                    </select>
-                    <br>
-                    <label for="hombreNoH">Hombre no hemofilico:</label>
-                    <select name="opcionesHombreNoH" id="cmbx2">
-                    <option value="XhY">XhY</option>
-                    <option value="XYh">XYh</option>
-                    <option value="XHY">XHY</option>
-                    </select>
+                <form name="ejercicios1A" style="float: left; margin-right: 100px;">
+
+                    <label style="margin-right: 42px;">Mujer portadora:</label><br>
+                    <input type="radio" name="R1A">
+                    <label for="R1A"> X<sub>h</sub>X<sub>h</sub></label><br>
+
+                    <input type="radio" id="R1A" name="R1A">
+                    <label id="R1AL"> X<sub>h</sub>X</label><br><!-- XhX -->
+
+                    <input type="radio" name="R1A">
+                    <label for="R1C"> XX</label><br> 
+                </form>
+                <form>
+                    <label for="hombreNoH">Hombre no hemofilico:</label><br>
+                    <input type="radio" name="R1A">
+                    <label for="R1A"> X<sub>h</sub>Y</label><br>
+                    <input type="radio" name="R1A">
+                    <label for="R1B"> XY<sub>h</sub></label><br>
+                    <input type="radio" id="R1B" name="R1A">
+                    <label id="R1BL"> XY</label><br> 
                 </form>
             </div>
 
@@ -112,9 +116,9 @@
                 <hr>
                 <form name="ejercicios1B">
                     <label class="espacio font">P:</label> 
-                    <input class="ejer" type="text"> 
+                    <input class="ejer" type="text" id="R1PA"> 
                     <label class="font">X</label>
-                    <input class="ejer" type="text"> 
+                    <input class="ejer" type="text" id="R1PB"> 
                 </form>
             </div>
 
@@ -122,11 +126,11 @@
                 <BR>  
                 <form name="ejercicios1C">
                     <label class="espacio font">G:</label> 
-                    <input class="peque" type="text"> 
-                    <input class="peque" type="text">
+                    <input class="peque" type="text" id="R1GA"> 
+                    <input class="peque" type="text" id="R1GB">
                     <label class="font">X</label>
-                    <input class="peque" type="text"> 
-                    <input class="peque" type="text">
+                    <input class="peque" type="text" id="R1GC"> 
+                    <input class="peque" type="text" id="R1GD">
                 </form>
             </div>
 
@@ -134,34 +138,31 @@
                 <BR>  
                 <form name="ejercicios1D">
                     <label class="font" style="width: 120px;">F1:</label>      
-                    <input class="ejer" type="text">                      
-                    <input class="ejer" type="text"><BR>                
-                    <input class="ejer" type="text">                
-                    <input class="ejer" type="text">
-                    <input class="ejer" type="text"><BR> 
-                    <input class="ejer" type="text">                
-                    <input class="ejer" type="text">
-                    <input class="ejer" type="text"><BR>                          
+                    <input class="ejer" type="text" id="R1FA">                      
+                    <input class="ejer" type="text" id="R1FB"><BR>                
+                    <input class="ejer" type="text" id="R1FC">                
+                    <input class="ejer" type="text" id="R1FD">
+                    <input class="ejer" type="text" id="R1FE"><BR> 
+                    <input class="ejer" type="text" id="R1FF">                
+                    <input class="ejer" type="text" id="R1FG">
+                    <input class="ejer" type="text" id="R1FH"><BR>                          
                 </form>
             </div>
             
             <div>
-                <hr>
-                <form name="ejercicios1D">
-                    <label style="width: 120px;">Respuesta:</label><BR>   
-                    <input type="radio" id="R1A" name="R1A">
-                    <label for="R1A"> La probabilidad de que nazca un hijo varón hemofílico es de 3/4.</label><br>
-                    <input type="radio" id="R1B" name="R1A">
-                    <label for="R1B"> La probabilidad de que nazca una hija hemofílica es de 1/4.</label><br>
-                    <input type="radio" id="R1C" name="R1A">
-                    <label for="R1C"> La probabilidad de que nazca un hijo varón hemofílico es de 1/4</label><br>   
-                    <input type="radio" id="R1D" name="R1A">
-                    <label for="R1D"> La probabilidad de que nazca un hijo varón hemofílico es de 1/2.</label>                            
+                <br><p>RESPUESTA: </p>
+                <form>                           
+                    <select id="R1C">
+                        <option >La probabilidad de que tengan una hija hemofílica es de 1/4.</option>
+                        <option >La probabilidad de que tengan un hijo varón hemofílico es de 1/4.</option>
+                        <option >La probabilidad de que tengan un hijo varón hemofílico es de 1/2.</option>
+                        <option >La probabilidad de que tengan un hijo varón hemofílico es de 3/4.</option>
+                    </select>
+                    <br>
+                    <label id="R1CL"></label>
                 </form>
                 <br><br><br>
-                <form style="text-align: center;">
-                    <input type="button" value="OK" onClick="potencia()"> 
-                </form>
+                <button id="respuestas1">Revisar</button>
             </div>
             <hr>
         </div>
@@ -259,10 +260,232 @@
             </div>
             <hr>
         </div>
+
+        <!-- 3er ejercicio -->
+        <div class="tab long">
+            <h3 style="color: black;">HERENCIA AUTOSÓMICA RECESIVA</h3>
+            <p>Para el carácter “color de ojos”, el alelo azul se pasa de manera recesiva, comparado con el alelo negro.</p>
+            <div>
+                <form name="ejercicios1A">
+                    <hr>
+                    <label>a) ¿Qué probabilidad hay de que dos personas con ojos negros, heterocigotos, tengan un hijo de ojos azules?</label>
+                    <br><label>Probabilidad:</label>
+                    <select name="opcionesMujerPor" id="cmbx3">
+                    <option value="Nn">1/4</option>
+                    <option value="NN">1/2</option>
+                    <option value="nn">2/4</option>
+                    <option value="nn">1</option>
+                    </select>
+                </form>
+            </div>
+            <div style="text-align: center;">
+                <br>
+                <form name="ejercicios1B">
+                    <label class="espacio font">P:</label> 
+                    <input class="ejer" type="text"> 
+                    <label class="font">X</label>
+                    <input class="ejer" type="text"> 
+                </form>
+            </div>
+
+            <div style="text-align: center;">
+                <BR>  
+                <form name="ejercicios1C">
+                    <label class="espacio font">G:</label> 
+                    <input class="peque" type="text"> 
+                    <input class="peque" type="text">
+                    <label class="font">X</label>
+                    <input class="peque" type="text"> 
+                    <input class="peque" type="text">
+                </form>
+            </div>
+
+            <div style="text-align: center;">
+                <BR>  
+                <form name="ejercicios1D">
+                    <label class="font" style="width: 120px;">F1:</label>      
+                    <input class="ejer" type="text">                      
+                    <input class="ejer" type="text"><BR>                
+                    <input class="ejer" type="text">                
+                    <input class="ejer" type="text">
+                    <input class="ejer" type="text"><BR> 
+                    <input class="ejer" type="text">                
+                    <input class="ejer" type="text">
+                    <input class="ejer" type="text"><BR>                          
+                </form>
+            </div>
+            <div>
+                <br><p>RESPUESTA: </p>
+                <form name="ejercicios2D">                           
+                    <label for="mujerPor">Fenotipo:</label>
+                    <select name="opcionesMujerPor" id="cmbx5">
+                    <option value="eje1RA">¼ de los hijos  tendrán ojos azules y 50% de los hijos tendrán ojos negros.</option>
+                    <option value="eje1RB">100% tendrán ojos negros.</option>
+                    <option value="eje1RC">2/4 de los hijos tendrán ojos negros y 2/4 ojos azules.</option>
+                    <option value="eje1RC">50% hijas serán portadoras y 50% de los hijos serán portadores.</option>
+                    </select>
+                    <br>
+                </form>
+            </div>
+            <hr>
+            <div>
+                <form>
+                    <br>
+                    <label>b) ¿Qué porcentaje de hijos con ojos azules tendrán una pareja con ojos azules?</label>
+                    <br><label>Porcentaje:</label>
+                    <select name="opcionesHombreNoH" id="cmbx4">
+                    <option value="Nn">25%</option>
+                    <option value="nn">50%</option>
+                    <option value="NN">100%</option>
+                    <option value="NN">75%</option>
+                    </select>
+                </form>
+            </div>
+
+            <div style="text-align: center;">
+                <br>
+                <form name="ejercicios1B">
+                    <label class="espacio font">P:</label> 
+                    <input class="ejer" type="text"> 
+                    <label class="font">X</label>
+                    <input class="ejer" type="text"> 
+                </form>
+            </div>
+
+            <div style="text-align: center;">
+                <BR>  
+                <form name="ejercicios1C">
+                    <label class="espacio font">G:</label> 
+                    <input class="peque" type="text"> 
+                    <input class="peque" type="text">
+                    <label class="font">X</label>
+                    <input class="peque" type="text"> 
+                    <input class="peque" type="text">
+                </form>
+            </div>
+
+            <div style="text-align: center;">
+                <BR>  
+                <form name="ejercicios1D">
+                    <label class="font" style="width: 120px;">F1:</label>      
+                    <input class="ejer" type="text">                      
+                    <input class="ejer" type="text"><BR>                
+                    <input class="ejer" type="text">                
+                    <input class="ejer" type="text">
+                    <input class="ejer" type="text"><BR> 
+                    <input class="ejer" type="text">                
+                    <input class="ejer" type="text">
+                    <input class="ejer" type="text"><BR>                          
+                </form>
+            </div>
+            
+            <div>
+                <br><p>RESPUESTA: </p>
+                <form name="ejercicios2D">                           
+                    <label for="mujerPor">Fenotipo</label>
+                    <select name="opcionesMujerPor" id="cmbx5">
+                    <option value="eje1RA">50% de los hijos tendrán ojos negros y 50% ojos azules.</option>
+                    <option value="eje1RB">100 % de los hijos tendrán ojos azules.</option>
+                    <option value="eje1RC">25%  de los hijos tendrán ojos azules y 75%  ojos negros.</option>
+                    <option value="eje1RC">25%  de los hijos tendrán ojos negros y 75%  ojos azules.</option>
+                    </select>
+                    <br><hr>
+                </form>
+                <form style="text-align: center;">
+                    <br><br><br>
+                    <input type="button" value="OK" onClick="potencia()"> 
+                </form>
+            </div>  
+        </div>
+
+        <!-- 4to ejercicio -->
+        <div class="tab long">
+            <h3 style="color: black;">HERENCIA RECESIVA LIGADA AL SEXO DEL CROMOSOMA X</h3>
+            <p>El daltonismo está determinado por un gen recesivo (<sub>d</sub>) ligado al cromosoma X. ¿Cuál sería el porcentaje del  fenotipo de los descendientes de un hombre daltónico y una mujer normal?</p>
+            <hr>     
+            <div>
+                <form name="ejercicios1A" style="float: left; margin-right: 100px;">
+
+                    <label style="margin-right: 42px;">Hombre Daltónico:  </label><br>
+                    <input type="radio" id="R1A" name="R1A">
+                    <label for="R1A"> X<sub>d</sub>Y</label><br>
+                    <input type="radio" id="R1B" name="R1A">
+                    <label for="R1B"> XY</label><br>
+                    <input type="radio" id="R1C" name="R1A">
+                    <label for="R1C"> X<sub>D</sub>X<sub>D</sub></label><br> 
+                </form>
+                <form>
+                    <label for="hombreNoH">Mujer Normal:      </label><br>
+                    <input type="radio" id="R1A" name="R1A">
+                    <label for="R1A"> XX</label><br>
+                    <input type="radio" id="R1B" name="R1A">
+                    <label for="R1B"> X<sub>D</sub>X</label><br>
+                    <input type="radio" id="R1C" name="R1A">
+                    <label for="R1C"> X<sub>d</sub>X<sub>d</sub></label><br> 
+                </form>
+            </div>
+
+            <div style="text-align: center;">
+                <hr>
+                <form name="ejercicios1B">
+                    <label class="espacio font">P:</label> 
+                    <input class="ejer" type="text"> 
+                    <label class="font">X</label>
+                    <input class="ejer" type="text"> 
+                </form>
+            </div>
+
+            <div style="text-align: center;">
+                <BR>  
+                <form name="ejercicios1C">
+                    <label class="espacio font">G:</label> 
+                    <input class="peque" type="text"> 
+                    <input class="peque" type="text">
+                    <label class="font">X</label>
+                    <input class="peque" type="text"> 
+                    <input class="peque" type="text">
+                </form>
+            </div>
+
+            <div style="text-align: center;">
+                <BR>  
+                <form name="ejercicios1D">
+                    <label class="font" style="width: 120px;">F1:</label>      
+                    <input class="ejer" type="text">                      
+                    <input class="ejer" type="text"><BR>                
+                    <input class="ejer" type="text">                
+                    <input class="ejer" type="text">
+                    <input class="ejer" type="text"><BR> 
+                    <input class="ejer" type="text">                
+                    <input class="ejer" type="text">
+                    <input class="ejer" type="text"><BR>                          
+                </form>
+            </div>
+            
+            <div>
+                <br><p>RESPUESTA: </p>
+                <form name="ejercicios2D">                           
+                    <label for="mujerPor">Fenotipo</label>
+                    <select name="opcionesMujerPor" id="cmbx5">
+                    <option value="eje1RA">el 50% correspondiente a las hijas serán portadoras (con visión normal) y el 50% correspondiente a los hijos tendrá visión normal.</option>
+                    <option value="eje1RB">100 % serán portadores.</option>
+                    <option value="eje1RC">50% hijas serán enfermas y 50% de los hijos tendrán visión normal.</option>
+                    <option value="eje1RC">50% hijas serán portadoras y 50% de los hijos serán portadores.</option>
+                    </select>
+                    <br>
+                </form>
+            </div>
+
+           
+            <form style="text-align: center;">
+                <br><br><br>
+                <input type="button" value="OK" onClick="potencia()"> 
+            </form> 
+        </div>
     </div>
 </div>
     </div>
-
+    <script src="js/respuestas1.js"></script>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
