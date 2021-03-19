@@ -136,7 +136,7 @@
 
             <div style="text-align: center;">
                 <BR>  
-                <form name="ejercicios1D">
+                <form>
                     <label class="font" style="width: 120px;">F1:</label>      
                     <input class="ejer" type="text" id="R1FA">                      
                     <input class="ejer" type="text" id="R1FB"><BR>                
@@ -177,86 +177,88 @@
                 <form name="ejercicios1A">
                     <hr>
                     <label for="mujerPor">Progenitor afectado heterocigoto:</label>
-                    <select name="opcionesMujerPor" id="cmbx3">
+                    <select id="R2A">
                     <option value="Nn">Nn</option>
                     <option value="NN">NN</option>
                     <option value="nn">nn</option>
                     </select>
+                    <label id="R2AL" style="text-align: center;"></label>
                     <br>
                     <label style="margin-right: 125px;">Progenitor normal:</label>
-                    <select name="opcionesHombreNoH" id="cmbx4">
+                    <select id="R2B">
                     <option value="Nn">Nn</option>
                     <option value="nn">nn</option>
                     <option value="NN">NN</option>
                     </select>
+                    <label id="R2BL" style="text-align: center;"></label>
                 </form>
             </div>
 
             <div style="text-align: center;">
                 <hr>
-                <form name="ejercicios1B">
+                <form>
                     <label class="espacio font">P:</label> 
-                    <input class="ejer" type="text"> 
+                    <input class="ejer" type="text" id="R2PA"> 
                     <label class="font">X</label>
-                    <input class="ejer" type="text"> 
+                    <input class="ejer" type="text" id="R2PB"> 
                 </form>
             </div>
 
             <div style="text-align: center;">
                 <BR>  
-                <form name="ejercicios1C">
+                <form>
                     <label class="espacio font">G:</label> 
-                    <input class="peque" type="text"> 
-                    <input class="peque" type="text">
+                    <input class="peque" type="text" id="R2GA"> 
+                    <input class="peque" type="text" id="R2GB">
                     <label class="font">X</label>
-                    <input class="peque" type="text"> 
-                    <input class="peque" type="text">
+                    <input class="peque" type="text" id="R2GC"> 
+                    <input class="peque" type="text" id="R2GD">
                 </form>
             </div>
 
             <div style="text-align: center;">
                 <BR>  
-                <form name="ejercicios1D">
+                <form>
                     <label class="font" style="width: 120px;">F1:</label>      
-                    <input class="ejer" type="text">                      
-                    <input class="ejer" type="text"><BR>                
-                    <input class="ejer" type="text">                
-                    <input class="ejer" type="text">
-                    <input class="ejer" type="text"><BR> 
-                    <input class="ejer" type="text">                
-                    <input class="ejer" type="text">
-                    <input class="ejer" type="text"><BR>                          
+                    <input class="ejer" type="text" id="R2FA">                      
+                    <input class="ejer" type="text" id="R2FB"><BR>                
+                    <input class="ejer" type="text" id="R2FC">                
+                    <input class="ejer" type="text" id="R2FD">
+                    <input class="ejer" type="text" id="R2FE"><BR> 
+                    <input class="ejer" type="text" id="R2FF">                
+                    <input class="ejer" type="text" id="R2FG">
+                    <input class="ejer" type="text" id="R2FH"><BR>                          
                 </form>
-                <hr>
             </div>
             
             <div>
-                <form name="ejercicios2D" style="text-align: right; margin-right: 25%;">                           
+                <form>                           
                     <label for="mujerPor">Probabilidad de presentar el Síndrome de Marfan en la descendencia:</label>
-                    <select name="opcionesMujerPor" id="cmbx5">
+                    <select id="R2C">
                     <option value="eje1RA">2/4</option>
                     <option value="eje1RB">3/4</option>
                     <option value="eje1RC">1/4</option>
                     </select>
+                    <label id="R2CL" style="text-align: center;"></label>
                     <br>
-                    <label style="margin-right: 55px;">Porcentaje(%):</label>
-                    <select name="opcionesHombreNoH" id="cmbx6" style="text-align: right;">
+                    <label style="margin-right: 50px;">Porcentaje(%):</label>
+                    <select id="R2D">
                     <option value="eje2RA">50</option>
                     <option value="eje2RB">75</option>
                     <option value="eje2RC">25</option>
                     </select>
+                    <label id="R2DL" style="text-align: center;"></label>
                     <br>
-                    <label style="margin-right: 50px;">Proporción :</label>
-                    <select name="opcionesHombreNoH" id="cmbx6" style="text-align: right;">
+                    <label style="margin-right: 62px;">Proporción :</label>
+                    <select id="R2E">
                     <option value="eje3RA">2:2</option>
                     <option value="eje3RB">3:1</option>
                     <option value="eje3RC">1:3</option>
                     </select>
+                    <label id="R2EL" style="text-align: center;"></label>
                 </form>
-                <form style="text-align: center;">
-                    <br><br><br>
-                    <input type="button" value="OK" onClick="potencia()"> 
-                </form>
+                <br><br><br>
+                <button id="respuestas2">Revisar</button>
             </div>
             <hr>
         </div>
@@ -266,64 +268,66 @@
             <h3 style="color: black;">HERENCIA AUTOSÓMICA RECESIVA</h3>
             <p>Para el carácter “color de ojos”, el alelo azul se pasa de manera recesiva, comparado con el alelo negro.</p>
             <div>
-                <form name="ejercicios1A">
+                <form>
                     <hr>
                     <label>a) ¿Qué probabilidad hay de que dos personas con ojos negros, heterocigotos, tengan un hijo de ojos azules?</label>
                     <br><label>Probabilidad:</label>
-                    <select name="opcionesMujerPor" id="cmbx3">
+                    <select id="R3A">
                     <option value="Nn">1/4</option>
                     <option value="NN">1/2</option>
                     <option value="nn">2/4</option>
                     <option value="nn">1</option>
                     </select>
+                    <label id="R3AL" style="text-align: center;"></label>
                 </form>
             </div>
             <div style="text-align: center;">
-                <br>
-                <form name="ejercicios1B">
+                <hr>
+                <form>
                     <label class="espacio font">P:</label> 
-                    <input class="ejer" type="text"> 
+                    <input class="ejer" type="text" id="R3PA"> 
                     <label class="font">X</label>
-                    <input class="ejer" type="text"> 
+                    <input class="ejer" type="text" id="R3PB"> 
                 </form>
             </div>
 
             <div style="text-align: center;">
                 <BR>  
-                <form name="ejercicios1C">
+                <form>
                     <label class="espacio font">G:</label> 
-                    <input class="peque" type="text"> 
-                    <input class="peque" type="text">
+                    <input class="peque" type="text" id="R3GA"> 
+                    <input class="peque" type="text" id="R3GB">
                     <label class="font">X</label>
-                    <input class="peque" type="text"> 
-                    <input class="peque" type="text">
+                    <input class="peque" type="text" id="R3GC"> 
+                    <input class="peque" type="text" id="R3GD">
                 </form>
             </div>
 
             <div style="text-align: center;">
                 <BR>  
-                <form name="ejercicios1D">
+                <form>
                     <label class="font" style="width: 120px;">F1:</label>      
-                    <input class="ejer" type="text">                      
-                    <input class="ejer" type="text"><BR>                
-                    <input class="ejer" type="text">                
-                    <input class="ejer" type="text">
-                    <input class="ejer" type="text"><BR> 
-                    <input class="ejer" type="text">                
-                    <input class="ejer" type="text">
-                    <input class="ejer" type="text"><BR>                          
+                    <input class="ejer" type="text" id="R3FA">                      
+                    <input class="ejer" type="text" id="R3FB"><BR>                
+                    <input class="ejer" type="text" id="R3FC">                
+                    <input class="ejer" type="text" id="R3FD">
+                    <input class="ejer" type="text" id="R3FE"><BR> 
+                    <input class="ejer" type="text" id="R3FF">                
+                    <input class="ejer" type="text" id="R3FG">
+                    <input class="ejer" type="text" id="R3FH"><BR>                          
                 </form>
             </div>
             <div>
                 <br><p>RESPUESTA: </p>
-                <form name="ejercicios2D">                           
-                    <label for="mujerPor">Fenotipo:</label>
-                    <select name="opcionesMujerPor" id="cmbx5">
+                <form>                           
+                    <label>Fenotipo:</label>
+                    <select id="R3C">
                     <option value="eje1RA">¼ de los hijos  tendrán ojos azules y 50% de los hijos tendrán ojos negros.</option>
                     <option value="eje1RB">100% tendrán ojos negros.</option>
                     <option value="eje1RC">2/4 de los hijos tendrán ojos negros y 2/4 ojos azules.</option>
                     <option value="eje1RC">50% hijas serán portadoras y 50% de los hijos serán portadores.</option>
                     </select>
+                    <br><label id="R3CL" style="text-align: center;"></label>
                     <br>
                 </form>
             </div>
@@ -333,68 +337,67 @@
                     <br>
                     <label>b) ¿Qué porcentaje de hijos con ojos azules tendrán una pareja con ojos azules?</label>
                     <br><label>Porcentaje:</label>
-                    <select name="opcionesHombreNoH" id="cmbx4">
+                    <select id="R3B">
                     <option value="Nn">25%</option>
                     <option value="nn">50%</option>
                     <option value="NN">100%</option>
                     <option value="NN">75%</option>
                     </select>
+                    <label id="R3BL" style="text-align: center;"></label>
                 </form>
             </div>
 
             <div style="text-align: center;">
-                <br>
-                <form name="ejercicios1B">
+                <hr>
+                <form>
                     <label class="espacio font">P:</label> 
-                    <input class="ejer" type="text"> 
+                    <input class="ejer" type="text" id="R3PA2"> 
                     <label class="font">X</label>
-                    <input class="ejer" type="text"> 
+                    <input class="ejer" type="text" id="R3PB2"> 
                 </form>
             </div>
 
             <div style="text-align: center;">
                 <BR>  
-                <form name="ejercicios1C">
+                <form>
                     <label class="espacio font">G:</label> 
-                    <input class="peque" type="text"> 
-                    <input class="peque" type="text">
+                    <input class="peque" type="text" id="R3GA2"> 
+                    <input class="peque" type="text" id="R3GB2">
                     <label class="font">X</label>
-                    <input class="peque" type="text"> 
-                    <input class="peque" type="text">
+                    <input class="peque" type="text" id="R3GC2"> 
+                    <input class="peque" type="text" id="R3GD2">
                 </form>
             </div>
 
             <div style="text-align: center;">
                 <BR>  
-                <form name="ejercicios1D">
+                <form>
                     <label class="font" style="width: 120px;">F1:</label>      
-                    <input class="ejer" type="text">                      
-                    <input class="ejer" type="text"><BR>                
-                    <input class="ejer" type="text">                
-                    <input class="ejer" type="text">
-                    <input class="ejer" type="text"><BR> 
-                    <input class="ejer" type="text">                
-                    <input class="ejer" type="text">
-                    <input class="ejer" type="text"><BR>                          
+                    <input class="ejer" type="text" id="R3FA2">                      
+                    <input class="ejer" type="text" id="R3FB2"><BR>                
+                    <input class="ejer" type="text" id="R3FC2">                
+                    <input class="ejer" type="text" id="R3FD2">
+                    <input class="ejer" type="text" id="R3FE2"><BR> 
+                    <input class="ejer" type="text" id="R3FF2">                
+                    <input class="ejer" type="text" id="R3FG2">
+                    <input class="ejer" type="text" id="R3FH2"><BR>                          
                 </form>
             </div>
-            
             <div>
                 <br><p>RESPUESTA: </p>
-                <form name="ejercicios2D">                           
-                    <label for="mujerPor">Fenotipo</label>
-                    <select name="opcionesMujerPor" id="cmbx5">
-                    <option value="eje1RA">50% de los hijos tendrán ojos negros y 50% ojos azules.</option>
-                    <option value="eje1RB">100 % de los hijos tendrán ojos azules.</option>
-                    <option value="eje1RC">25%  de los hijos tendrán ojos azules y 75%  ojos negros.</option>
-                    <option value="eje1RC">25%  de los hijos tendrán ojos negros y 75%  ojos azules.</option>
+                <form>                           
+                    <label>Fenotipo</label>
+                    <select id="R3D">
+                    <option>50% de los hijos tendrán ojos negros y 50% ojos azules.</option>
+                    <option>100 % de los hijos tendrán ojos azules.</option>
+                    <option>25%  de los hijos tendrán ojos azules y 75%  ojos negros.</option>
+                    <option>25%  de los hijos tendrán ojos negros y 75%  ojos azules.</option>
                     </select>
+                    <br><label id="R3DL" style="text-align: center;"></label>
                     <br><hr>
                 </form>
-                <form style="text-align: center;">
-                    <br><br><br>
-                    <input type="button" value="OK" onClick="potencia()"> 
-                </form>
+                <br><br><br>
+                <button id="respuestas3">Revisar</button>
             </div>  
         </div>
 
@@ -407,85 +410,85 @@
                 <form name="ejercicios1A" style="float: left; margin-right: 100px;">
 
                     <label style="margin-right: 42px;">Hombre Daltónico:  </label><br>
-                    <input type="radio" id="R1A" name="R1A">
-                    <label for="R1A"> X<sub>d</sub>Y</label><br>
-                    <input type="radio" id="R1B" name="R1A">
-                    <label for="R1B"> XY</label><br>
-                    <input type="radio" id="R1C" name="R1A">
-                    <label for="R1C"> X<sub>D</sub>X<sub>D</sub></label><br> 
+                    <input type="radio" id="R4A" name="R1A">
+                    <label id="R4AL"> X<sub>d</sub>Y</label><br>
+                    <input type="radio" name="R1A">
+                    <label> XY</label><br>
+                    <input type="radio" name="R1A">
+                    <label> X<sub>D</sub>X<sub>D</sub></label><br> 
                 </form>
                 <form>
                     <label for="hombreNoH">Mujer Normal:      </label><br>
-                    <input type="radio" id="R1A" name="R1A">
-                    <label for="R1A"> XX</label><br>
-                    <input type="radio" id="R1B" name="R1A">
-                    <label for="R1B"> X<sub>D</sub>X</label><br>
-                    <input type="radio" id="R1C" name="R1A">
-                    <label for="R1C"> X<sub>d</sub>X<sub>d</sub></label><br> 
+                    <input type="radio" name="R1A" id="R4B">
+                    <label id="R4BL"> XX</label><br>
+                    <input type="radio" name="R1A">
+                    <label> X<sub>D</sub>X</label><br>
+                    <input type="radio" name="R1A">
+                    <label> X<sub>d</sub>X<sub>d</sub></label><br> 
                 </form>
             </div>
 
             <div style="text-align: center;">
                 <hr>
-                <form name="ejercicios1B">
+                <form>
                     <label class="espacio font">P:</label> 
-                    <input class="ejer" type="text"> 
+                    <input class="ejer" type="text" id="R4PA"> 
                     <label class="font">X</label>
-                    <input class="ejer" type="text"> 
+                    <input class="ejer" type="text" id="R4PB"> 
                 </form>
             </div>
 
             <div style="text-align: center;">
                 <BR>  
-                <form name="ejercicios1C">
+                <form>
                     <label class="espacio font">G:</label> 
-                    <input class="peque" type="text"> 
-                    <input class="peque" type="text">
+                    <input class="peque" type="text" id="R4GA"> 
+                    <input class="peque" type="text" id="R4GB">
                     <label class="font">X</label>
-                    <input class="peque" type="text"> 
-                    <input class="peque" type="text">
+                    <input class="peque" type="text" id="R4GC"> 
+                    <input class="peque" type="text" id="R4GD">
                 </form>
             </div>
 
             <div style="text-align: center;">
                 <BR>  
-                <form name="ejercicios1D">
+                <form>
                     <label class="font" style="width: 120px;">F1:</label>      
-                    <input class="ejer" type="text">                      
-                    <input class="ejer" type="text"><BR>                
-                    <input class="ejer" type="text">                
-                    <input class="ejer" type="text">
-                    <input class="ejer" type="text"><BR> 
-                    <input class="ejer" type="text">                
-                    <input class="ejer" type="text">
-                    <input class="ejer" type="text"><BR>                          
+                    <input class="ejer" type="text" id="R4FA">                      
+                    <input class="ejer" type="text" id="R4FB"><BR>                
+                    <input class="ejer" type="text" id="R4FC">                
+                    <input class="ejer" type="text" id="R4FD">
+                    <input class="ejer" type="text" id="R4FE"><BR> 
+                    <input class="ejer" type="text" id="R4FF">                
+                    <input class="ejer" type="text" id="R4FG">
+                    <input class="ejer" type="text" id="R4FH"><BR>                          
                 </form>
             </div>
             
             <div>
                 <br><p>RESPUESTA: </p>
-                <form name="ejercicios2D">                           
-                    <label for="mujerPor">Fenotipo</label>
-                    <select name="opcionesMujerPor" id="cmbx5">
-                    <option value="eje1RA">el 50% correspondiente a las hijas serán portadoras (con visión normal) y el 50% correspondiente a los hijos tendrá visión normal.</option>
-                    <option value="eje1RB">100 % serán portadores.</option>
-                    <option value="eje1RC">50% hijas serán enfermas y 50% de los hijos tendrán visión normal.</option>
-                    <option value="eje1RC">50% hijas serán portadoras y 50% de los hijos serán portadores.</option>
+                <form>                           
+                    <label>Fenotipo</label>
+                    <select id="R4C">
+                    <option>el 50% correspondiente a las hijas serán portadoras (con visión normal) y el 50% correspondiente a los hijos tendrá visión normal.</option>
+                    <option>100 % serán portadores.</option>
+                    <option>50% hijas serán enfermas y 50% de los hijos tendrán visión normal.</option>
+                    <option>50% hijas serán portadoras y 50% de los hijos serán portadores.</option>
                     </select>
+                    <br><label id="R4CL" style="text-align: center;"></label>
                     <br>
                 </form>
-            </div>
-
-           
-            <form style="text-align: center;">
-                <br><br><br>
-                <input type="button" value="OK" onClick="potencia()"> 
-            </form> 
+            </div>           
+            <br><br><br>
+            <button id="respuestas4">Revisar</button>
         </div>
     </div>
 </div>
     </div>
     <script src="js/respuestas1.js"></script>
+    <script src="js/respuestas2.js"></script>
+    <script src="js/respuestas3.js"></script>
+    <script src="js/respuestas4.js"></script>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
