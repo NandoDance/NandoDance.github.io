@@ -86,7 +86,7 @@ function ejercicio(){
         R3CL.style.backgroundColor = "green";
         }
         else{
-        R3CL.textContent = "Incorrecto: ¼ de los hijos  tendrán ojos azules y 50% de los hijos tendrán ojos negros."
+        R3CL.textContent = "Incorrecto: ¼ de los hijos  tendrán ojos azules y 75% de los hijos tendrán ojos negros."
         R3CL.style.width = "600px";
         R3CL.style.borderRadius = "6px";
         R3CL.style.backgroundColor = "red";
@@ -105,183 +105,183 @@ function ejercicio(){
     } 
     //---------------------------------------------
     //  P   
-    if(R3PA.value == "Nn"){
+    if(R3PA.value == "Aa"){
         R3PA.style.backgroundColor = "green";
     }else{
-        R3PA.value = "Nn";
+        R3PA.value = "Aa";
         R3PA.style.backgroundColor = "red";        
     }
-    if(R3PB.value == "Nn"){
+    if(R3PB.value == "Aa"){
         R3PB.style.backgroundColor = "green";
     }else{
-        R3PB.value = "Nn";
+        R3PB.value = "Aa";
         R3PB.style.backgroundColor = "red";        
     }
     //---------------------------------------------
     //  G
-    if(R3GA.value == "N"){
+    if(R3GA.value == "A"){
         R3GA.style.backgroundColor = "green";
     }else{
-        R3GA.value = "N";
+        R3GA.value = "A";
         R3GA.style.backgroundColor = "red";        
     }
-    if(R3GB.value == "n"){
+    if(R3GB.value == "a"){
         R3GB.style.backgroundColor = "green";
     }else{
-        R3GB.value = "n";
+        R3GB.value = "a";
         R3GB.style.backgroundColor = "red";        
     }
-    if(R3GC.value == "N"){
+    if(R3GC.value == "A"){
         R3GC.style.backgroundColor = "green";
     }else{
-        R3GC.value = "N";
+        R3GC.value = "A";
         R3GC.style.backgroundColor = "red";        
     }
-    if(R3GD.value == "n"){
+    if(R3GD.value == "a"){
         R3GD.style.backgroundColor = "green";
     }else{
-        R3GD.value = "n";
+        R3GD.value = "a";
         R3GD.style.backgroundColor = "red";        
     }
     //---------------------------------------------
     // F
-    if(R3FA.value == "N"){
+    if(R3FA.value == "A"){
         R3FA.style.backgroundColor = "green";
     }else{
-        R3FA.value = "N";
+        R3FA.value = "A";
         R3FA.style.backgroundColor = "red";        
     }
-    if(R3FB.value == "n"){
+    if(R3FB.value == "a"){
         R3FB.style.backgroundColor = "green";
     }else{
-        R3FB.value = "n";
+        R3FB.value = "a";
         R3FB.style.backgroundColor = "red";        
     }
-    if(R3FC.value == "N"){
+    if(R3FC.value == "A"){
         R3FC.style.backgroundColor = "green";
     }else{
-        R3FC.value = "N";
+        R3FC.value = "A";
         R3FC.style.backgroundColor = "red";        
     }
-    if(R3FD.value == "NN"){
+    if(R3FD.value == "AA"){
         R3FD.style.backgroundColor = "green";
     }else{
-        R3FD.value = "NN";
+        R3FD.value = "AA";
         R3FD.style.backgroundColor = "red";        
     }
-    if(R3FE.value == "Nn"){
+    if(R3FE.value == "Aa"){
         R3FE.style.backgroundColor = "green";
     }else{
-        R3FE.value = "Nn";
+        R3FE.value = "Aa";
         R3FE.style.backgroundColor = "red";        
     }
-    if(R3FF.value == "n"){
+    if(R3FF.value == "a"){
         R3FF.style.backgroundColor = "green";
     }else{
-        R3FF.value = "n";
+        R3FF.value = "a";
         R3FF.style.backgroundColor = "red";        
     }
-    if(R3FG.value == "Nn"){
+    if(R3FG.value == "Aa"){
         R3FG.style.backgroundColor = "green";
     }else{
-        R3FG.value = "Nn";
+        R3FG.value = "Aa";
         R3FG.style.backgroundColor = "red";        
     }
-    if(R3FH.value == "nn"){
+    if(R3FH.value == "aa"){
         R3FH.style.backgroundColor = "green";
     }else{
-        R3FH.value = "nn";
+        R3FH.value = "aa";
         R3FH.style.backgroundColor = "red";        
     }
 
     //---------------------------------------------
     //  P   
-    if(R3PA2.value == "nn"){
+    if(R3PA2.value == "aa"){
         R3PA2.style.backgroundColor = "green";
     }else{
-        R3PA2.value = "nn";
+        R3PA2.value = "aa";
         R3PA2.style.backgroundColor = "red";        
     }
-    if(R3PB2.value == "nn"){
+    if(R3PB2.value == "aa"){
         R3PB2.style.backgroundColor = "green";
     }else{
-        R3PB2.value = "nn";
+        R3PB2.value = "aa";
         R3PB2.style.backgroundColor = "red";        
     }
     //---------------------------------------------
     //  G
-    if(R3GA2.value == "n"){
+    if(R3GA2.value == "a"){
         R3GA2.style.backgroundColor = "green";
     }else{
-        R3GA2.value = "n";
+        R3GA2.value = "a";
         R3GA2.style.backgroundColor = "red";        
     }
-    if(R3GB2.value == "n"){
+    if(R3GB2.value == "a"){
         R3GB2.style.backgroundColor = "green";
     }else{
-        R3GB2.value = "n";
+        R3GB2.value = "a";
         R3GB2.style.backgroundColor = "red";        
     }
-    if(R3GC2.value == "n"){
+    if(R3GC2.value == "a"){
         R3GC2.style.backgroundColor = "green";
     }else{
-        R3GC2.value = "n";
+        R3GC2.value = "a";
         R3GC2.style.backgroundColor = "red";        
     }
-    if(R3GD2.value == "n"){
+    if(R3GD2.value == "a"){
         R3GD2.style.backgroundColor = "green";
     }else{
-        R3GD2.value = "n";
+        R3GD2.value = "a";
         R3GD2.style.backgroundColor = "red";        
     }
     //---------------------------------------------
     // F
-    if(R3FA2.value == "n"){
+    if(R3FA2.value == "a"){
         R3FA2.style.backgroundColor = "green";
     }else{
-        R3FA2.value = "n";
+        R3FA2.value = "a";
         R3FA2.style.backgroundColor = "red";        
     }
-    if(R3FB2.value == "n"){
+    if(R3FB2.value == "a"){
         R3FB2.style.backgroundColor = "green";
     }else{
-        R3FB2.value = "n";
+        R3FB2.value = "a";
         R3FB2.style.backgroundColor = "red";        
     }
-    if(R3FC2.value == "n"){
+    if(R3FC2.value == "a"){
         R3FC2.style.backgroundColor = "green";
     }else{
-        R3FC2.value = "n";
+        R3FC2.value = "a";
         R3FC2.style.backgroundColor = "red";        
     }
-    if(R3FD2.value == "nn"){
+    if(R3FD2.value == "aa"){
         R3FD2.style.backgroundColor = "green";
     }else{
-        R3FD2.value = "nn";
+        R3FD2.value = "aa";
         R3FD2.style.backgroundColor = "red";        
     }
-    if(R3FE2.value == "nn"){
+    if(R3FE2.value == "aa"){
         R3FE2.style.backgroundColor = "green";
     }else{
-        R3FE2.value = "nn";
+        R3FE2.value = "aa";
         R3FE2.style.backgroundColor = "red";        
     }
-    if(R3FF2.value == "n"){
+    if(R3FF2.value == "a"){
         R3FF2.style.backgroundColor = "green";
     }else{
-        R3FF2.value = "n";
+        R3FF2.value = "a";
         R3FF2.style.backgroundColor = "red";        
     }
-    if(R3FG2.value == "nn"){
+    if(R3FG2.value == "aa"){
         R3FG2.style.backgroundColor = "green";
     }else{
-        R3FG2.value = "nn";
+        R3FG2.value = "aa";
         R3FG2.style.backgroundColor = "red";        
     }
-    if(R3FH2.value == "nn"){
+    if(R3FH2.value == "aa"){
         R3FH2.style.backgroundColor = "green";
     }else{
-        R3FH2.value = "nn";
+        R3FH2.value = "aa";
         R3FH2.style.backgroundColor = "red";        
     }
 }
