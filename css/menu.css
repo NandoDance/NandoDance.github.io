@@ -128,31 +128,15 @@
 	line-height: 28px;
 	margin: 0 auto 5px;
   }
-  @media screen and (max-width: 1186px) {
-	.tab.long {
-	  width: 100%;
-	}
-  }
-  @media screen and (max-width: 881px) {
-	.tab {
-	  width: 100% !important;
-	  margin: 10px 10px 10px 10px;
-	}
-  }
-  @media screen and (max-width: 700px) {
-	.content-container {
-	  padding: 10px 10px 10px 10px;
-	}
-  }
-
-  img.derecha {
+  .marfan{
 	float: right;
+	margin-right: 500px;
   }
   img.izquierda {
 	float: left;
   }
 
-/* ---------------------------------------------------
+  /* ---------------------------------------------------
     EJERCICIOS
 ----------------------------------------------------- */
 input.ejer  {
@@ -192,3 +176,37 @@ label.font{
 	cursor: default;
 }
 svg {overflow:hidden}
+
+  @media screen and (max-width: 1186px) {
+	.tab.long {
+	  width: 100%;
+	}
+  }
+  @media screen and (max-width: 881px) {
+	.tab {
+	  width: 100% !important;
+	  margin: 10px 10px 10px 10px;
+	}
+  }
+  @media screen and (max-width: 700px) {
+	.content-container {
+	  padding: 10px 10px 10px 10px;
+	}
+	img{
+		width: 100%;
+	}
+	.marfan{
+		width: 35%;
+		margin-right: 100px;
+	}
+	p,
+	dt {
+	  font-size: 0.7em;
+	}
+	input.ejer,input.peque{
+		width: 50px;
+	}
+	label.espacio{
+		width: 30px;
+	}
+  }
