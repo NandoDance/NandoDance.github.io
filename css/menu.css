@@ -186,16 +186,19 @@ label.font{
 /* ---------------------------------------------------
     HEREDOGRAMA
 ----------------------------------------------------- */
-.disabled {
-	color: grey;
+.mesaTrabajo{
+	margin: 1% 1% 1% 1%;
+	border: 1px solid black;
+	border-width: 1px;
+	float: right;
+	width: 700px;
+	height: 600px;
 }
-.popup_selection, .addpartner, .addparents, .delete, .settings {
-	cursor: pointer;
-}
-.addsibling, .addchild {
-	cursor: default;
-}
-svg {overflow:hidden}
+
+
+/* ---------------------------------------------------
+    Modos de pantalla 
+----------------------------------------------------- */
 
   @media screen and (max-width: 1186px) {
 	.tab.long {
