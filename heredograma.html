@@ -1,128 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,maximum-scale=2">
-	
-	<link href="https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.min.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
-	<link rel="stylesheet" href="css/menu.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script> 
-	<script src="https://cdn.jsdelivr.net/npm/d3@5.16.0/dist/d3.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-	<script src="../dist/js/pedigreejs.min.js"></script>
+    <title>Introducción</title>
 
-	<style>
-		body {
-		    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-		    font-size: 14px;
-		    line-height: 1.42857143;
-		    color: #333;
-		    background-color: #fff;
-		}
-		.container {
-		    width: 90%;
-		    max-width: 1140px;
-		    margin-right: auto;
-		    margin-left: auto;
-		}
-		
-		#ped {text-align:center;}
-		.btn {
-		color: #333;
-		    background-color: #fff;
-		    border: 1px solid #ccc;
-		    display: inline-block;
-		    padding: 6px 12px;
-		    cursor: pointer;
-		    margin-left: 5px;
-		    border-radius: 4px;
-		}
-		#opts {
-			background-color: #F5F5F5;
-			padding: 10px;
-			border: 1px solid #ccc;
-			font-size: 13px;
-    		line-height: 1.42857143;
-			overflow: auto;word-wrap: normal;
-			border-radius: 4px;
-		}
-		#history_ex7 {
-			padding: 10px;
-		}
-		.text-center {
-			text-align: center;
-			padding: 0 20px;
-		}
-	</style>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/style5.css">
 
-	<script type="text/javascript">
-	$( document ).ready(function() {
-		var parent_width = $('#pedigrees_ex7').parent().width();
-		var margin = ($(window).width()-parent_width > 10 ? 100 : 30);
-		var svg_width = (parent_width > 750 ? (parent_width*8/12 - margin) : parent_width- margin);
-
-		var dataset = [
-			{"name": "m11", "display_name": "John",  "sex": "M", "diabetes_diagnosis_age": 55, "top_level": true},
-			{"name": "f11", "display_name": "Jane",  "sex": "F", "status": 1, "top_level": true},
-			{"name": "m12", "display_name": "Jack", "sex": "M", "top_level": true},
-			{"name": "f12", "display_name": "Jill", "sex": "F", "top_level": true},
-			{"name": "m21", "display_name": "Jim", "divorced": "f21", "sex": "M", "mother": "f11", "father": "m11", "age": 56},
-			{"name": "f21", "display_name": "Jan", "divorced": "m21", "sex": "F", "mother": "f12", "father": "m12", "age": 63},
-			{"name": "ch1", "display_name": "Ana", "sex": "F", "mother": "f21", "father": "m21", "proband": true, "age": 25},
-			{"name": "ch2", "display_name": "Bet", "sex": "F", "mother": "f21", "father": "m21", "adopted_in": true},
-			{"name": "ch3", "display_name": "Adam", "sex": "M", "mother": "f21", "father": "m21", "stillbirth": true, "status": 1},
-			{"name": "ch4", "display_name": "Sam", "sex": "M", "mother": "f21", "father": "m21", "miscarriage": true},
-			{"name": "ch5", "mother": "f21", "father": "m21", "termination": true, "status": 1},
-			{"name":"m22","sex":"M","mother":"f12","father":"m12","mztwin":"2"},
-			{"name":"m23","sex":"M","mother":"f12","father":"m12","mztwin":"2"},
-			{"name":"m24","sex":"M","mother":"f12","father":"m12","dztwin":"1"},
-			{"name":"f22","sex":"F","mother":"f12","father":"m12","dztwin":"1"}
-		];
-		var opts = {
-			'targetDiv': 'pedigrees_ex7',
-			'btn_target': 'history_ex7',
-			'store_type': 'session',
-			'width': svg_width,
-			'height': 500,
-			'symbol_size': 35,
-			'edit': true,
-			'diseases': [
-				{'type': 'diabetes', 'colour': '#F68F35'},
-			],
-			'DEBUG': (pedigree_util.urlParam('debug') === null ? false : true)
-		};
-		//$('#opts').append(JSON.stringify(opts, null, 4));
-		var local_dataset = pedcache.current(opts);
-		if (local_dataset !== undefined && local_dataset !== null) {
-			opts.dataset = local_dataset;
-		} else {
-			opts.dataset = dataset;
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+	<!-- Drag and Drop -->
+	<script>
+				/*
+		function drop(ev) {
+		  ev.preventDefault();
+		  var data = ev.dataTransfer.getData("text");
+		  var nodeCopy = document.getElementById(data).cloneNode(true);
+		  nodeCopy.id = "newId";
+		  nodeCopy.ondragstart = null;
+          nodeCopy.addEventListener("mousedown", initialClick, false);
+		  ev.target.appendChild(nodeCopy);
+		}*/
+		function Click(ev) {    
+            if(ev.target.id != "new"){
+                const img = document.getElementById(ev.target.id).cloneNode(true);  
+            img.id = "new";        
+            document.getElementById("div1").appendChild(img);
+            img.addEventListener("mousedown", initialClick, false);
+            img.style.position = "absolute";}          
 		}
-		opts= ptree.build(opts);
-	});
+
+
+        var moving = false;
+
+        function move(e){
+        image.style.left = e.clientX + "px";
+        image.style.top = e.clientY + "px";  
+        }
+
+        function initialClick(e) {
+            // tell the browser we're handling this mouse event
+            e.preventDefault();
+            e.stopPropagation();
+            if(moving){
+                document.removeEventListener("mousemove", move);
+                moving = !moving;
+                return;
+            }else{     
+            moving = !moving;
+            image = this;
+            document.addEventListener("mousemove", move, false);}
+        }
 	</script>
 </head>
+
 <body>
-	<iframe src="https://gamejolt.com/games/mafiaparadox/597314" frameborder="0" scrolling="no" width="400" height="635" allowfullscreen></iframe>
-<div class="text-center">
-	<h2>Example 7</h2>
-	<label class="btn">
-		<input id="load" type="file" style="display: none;"/>Load
-	</label>	
-	<label class="btn">
-		<input id="save" type="button" style="display: none;"/>Save
-	</label>
-	<label class="btn">
-		<input id="print" type="button" style="display: none;"/>Print
-	</label>
-	<label class="btn">
-		<input id="svg_download" type="button" style="display: none;"/>SVG
-	</label>
-	<div id='history_ex7'></div>
-	<div id="pedigrees_ex7"></div>
-	<div id="node_properties"></div>
-</div>
-</body>|
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar" style="
+             background-color: #343a40;
+             min-width: 240px;
+             max-width: 240px;">
+            <div class="sidebar-header">
+                <h3>HEREDROGRAMA VIRTUAL</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <h3>&nbsp;&nbsp;Índice</h3>
+                <li><a href="simbologia.html">
+                        &nbsp;Simbología
+                    </a></li>
+                <li><a href="heredograma.html">
+                        &nbsp;Arma tu heredograma
+                    </a></li>
+                <li><a href="Introduccion.html">
+                    &nbsp;Introducción
+                </a></li>
+                <li><a href="ejercicios.html">
+                        &nbsp;Ejercicios 
+                    </a></li>
+                <li><a href="informacion.html">
+                        &nbsp;Links para más información</a>
+                </li>
+            </ul>
+            <br/><br/>
+            <h3>&nbsp;&nbsp;Integrantes</h3>
+            
+            <p style="color: white;">&nbsp;&nbsp;&nbsp;
+                Diana Caizapasto
+                <br/>&nbsp;&nbsp;&nbsp;
+                Alisson Calero<br/>
+                &nbsp;&nbsp;&nbsp;
+                Linda Chapi
+                <br/>&nbsp;&nbsp;&nbsp;
+                Mishel Guerrón<br/>
+                &nbsp;&nbsp;&nbsp;
+                Diana Jácome
+            </p>
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse" >
+                    <h2 class="titulo">HEREDROGRAMA VIRTUAL</h2> 
+                </div>
+            </div>
+            <div class="rela-block content-container">
+                <h2>Arma tu heredograma</h2>
+                <div class="tab long">
+					<div style="float: left;">
+						<p>Relación</p>
+						<TABLE>
+							<TR>
+							<TD> <img src="images/union.png"  
+									 	id="img1" onclick="Click(event)" width="50px" height="50px"> </TD>
+							<TD> <img src="images/unionIleg.png"
+										id="img2" onclick="Click(event)"> </TD>
+							<TD> <img src="images/consanguinidad.png"
+										id="img3" onclick="Click(event)"> </TD>
+							</TR>
+							<TR>
+							<TD> <img src="images/divorciados.png"
+										id="img4" onclick="Click(event)"></TD>
+							<TD> <img src="images/matrimonioSinHijos.png"
+										id="img5" onclick="Click(event)"></TD>
+							</TR>
+						</TABLE>
+						<hr>
+						<p>Unipersonal</p>
+						<TABLE>
+							<TR>
+							<TD> <img src="images/masculino.png"
+                                id="img6" onclick="Click(event)"> </TD>
+							<TD> <img src="images/hombreMuerto.png"
+                                id="img7" onclick="Click(event)"> </TD>
+							<TD> <img src="images/hombreEnfAuto.png"
+                                id="img8" onclick="Click(event)"> </TD>
+							</TR>
+							<TR>
+							<TD> <img src="images/hombrePort.png"
+                                id="img9" onclick="Click(event)"></TD>
+							</TR>
+						</TABLE>
+						<hr>
+						<TABLE>
+							<TR>
+							<TD> <img src="images/femenino.png"
+                                id="img10" onclick="Click(event)"> </TD>
+							<TD> <img src="images/mujerMuerta.png"
+                                id="img11" onclick="Click(event)"> </TD>
+							<TD> <img src="images/mujerEnfAuto.png"
+                                id="img12" onclick="Click(event)"> </TD>
+							</TR>
+							<TR>
+							<TD> <img src="images/mujerPort.png"
+                                id="img13" onclick="Click(event)"></TD>
+							<TD> <img src="images/embarazo.png"
+                                id="img14" onclick="Click(event)"></TD>
+							</TR>
+						</TABLE>
+						<hr>
+						<TABLE>
+							<TR>
+							<TD> <img src="images/enfermedadCX.png"
+                                id="img15" onclick="Click(event)"> </TD>
+							<TD> <img src="images/propositum.png"
+                                id="img16" onclick="Click(event)"> </TD>
+							<TD> <img src="images/adopcion.png"
+                                id="img17" onclick="Click(event)"> </TD>
+							</TR>
+							<TR>
+							<TD> <img src="images/gemelosDic.png"
+                                id="img18" onclick="Click(event)"></TD>
+							<TD> <img src="images/gemelosMon.png"
+                                id="img19" onclick="Click(event)"></TD>
+							<TD> <img src="images/abortoEsp.png"
+                                id="img20" onclick="Click(event)"></TD>
+							</TR>
+						</TABLE>
+					</div >
+
+					<div class="mesaTrabajo" id="div1" >
+
+					</div>
+                </div>	
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
