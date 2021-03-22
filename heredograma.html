@@ -31,21 +31,39 @@
           nodeCopy.addEventListener("mousedown", initialClick, false);
 		  ev.target.appendChild(nodeCopy);
 		}*/
-		function Click(ev) {    
-            if(ev.target.id != "new"){
-                const img = document.getElementById(ev.target.id).cloneNode(true);  
-            img.id = "new";        
-            document.getElementById("div1").appendChild(img);
-            img.addEventListener("mousedown", initialClick, false);
-            img.style.position = "absolute";}          
-		}
-
+        window.onload = function() {
+          var div1 = document.querySelector("#div1");
+          div1.addEventListener('contextmenu', function(event) {    
+              event.preventDefault();
+              alert('Elemento eliminado');
+              console.log(event.target.id);
+              document.getElementById(event.target.id).remove();
+              return false;
+          }, false);
+      }
 
         var moving = false;
 
+        var j=0;
+
+		function Click(ev) {    
+            if(!ev.target.id.includes("new")){               
+                ev.preventDefault();
+                const img = document.getElementById(ev.target.id).cloneNode(true);  
+                img.id = "new"+j;        
+                document.getElementById("div1").appendChild(img);
+                img.addEventListener("mousedown", initialClick, false);
+                img.addEventListener("dblclick",doubleClick);
+                j++;
+            }          
+		}       
+
         function move(e){
-        image.style.left = e.clientX + "px";
-        image.style.top = e.clientY + "px";  
+            // tell the browser we're handling this mouse event
+            e.preventDefault();
+            image.style.position = 'absolute';
+            image.style.left = e.pageX -250 + "px";
+            image.style.top = e.pageY -60 + "px";  
         }
 
         function initialClick(e) {
@@ -61,6 +79,52 @@
             image = this;
             document.addEventListener("mousemove", move, false);}
         }
+
+
+        var auxPX;
+        var auxPY;
+        var i=0;
+        function doubleClick(e){
+            console.log(e.target.id);
+            auxPX = document.getElementById(e.target.id).getBoundingClientRect().left;
+            auxPY = document.getElementById(e.target.id).getBoundingClientRect().top;
+            document.getElementById("numeroP").value = "";
+            document.getElementById("nombreP").value = "";
+            i++;
+        }
+
+        function numero(){
+            // crea un nuevo div y añade contenido                     
+            var newDiv = document.createElement("div");
+            newDiv.id ="A"+i;
+            //añade texto al div creado. 
+            var newContent = document.createTextNode(document.getElementById("numeroP").value);
+            newDiv.appendChild(newContent); 
+
+            // añade el elemento creado y su contenido al DOM
+            var currentDiv = document.getElementById("div1");
+            currentDiv.appendChild(newDiv);
+            newDiv.style.position =   'absolute';
+            newDiv.style.left = auxPX-230 + "px";
+            newDiv.style.top  = auxPY-10 + "px";  
+
+            //---------------------------------------------------------------
+            // crea un nuevo div y añade contenido                     
+            var newDiv2 = document.createElement("div");
+            newDiv2.style.position =   'absolute';
+            newDiv2.style.left = auxPX-270 + "px";
+            newDiv2.style.top  = auxPY-80  + "px";
+
+            newDiv2.id = "B"+i;
+            //añade texto al div creado. 
+            var newContent2 = document.createTextNode(document.getElementById("nombreP").value);
+            newDiv2.appendChild(newContent2); 
+
+            // añade el elemento creado y su contenido al DOM
+            var currentDiv2 = document.getElementById("div1");
+            currentDiv2.appendChild(newDiv2);
+        }
+
 	</script>
 </head>
 
@@ -111,41 +175,24 @@
         </nav>
 
         <!-- Page Content Holder -->
-        <div id="content">
+        <div id="content" style="padding: 0px;">
 
             <div class="container-fluid">
                 <button type="button" id="sidebarCollapse" class="navbar-btn">
                     <span></span>
                     <span></span>
                     <span></span>
+                    <h2 style="width: 1000px;">Arma tu heredograma</h2>
                 </button>
                 <div class="collapse navbar-collapse" >
                     <h2 class="titulo">HEREDROGRAMA VIRTUAL</h2> 
                 </div>
             </div>
             <div class="rela-block content-container">
-                <h2>Arma tu heredograma</h2>
-                <div class="tab long">
+                <div class="tab long" style="width: 1200px; height: 650;">
 					<div style="float: left;">
-						<p>Relación</p>
-						<TABLE>
-							<TR>
-							<TD> <img src="images/union.png"  
-									 	id="img1" onclick="Click(event)" width="50px" height="50px"> </TD>
-							<TD> <img src="images/unionIleg.png"
-										id="img2" onclick="Click(event)"> </TD>
-							<TD> <img src="images/consanguinidad.png"
-										id="img3" onclick="Click(event)"> </TD>
-							</TR>
-							<TR>
-							<TD> <img src="images/divorciados.png"
-										id="img4" onclick="Click(event)"></TD>
-							<TD> <img src="images/matrimonioSinHijos.png"
-										id="img5" onclick="Click(event)"></TD>
-							</TR>
-						</TABLE>
 						<hr>
-						<p>Unipersonal</p>
+						<p>Símbolos</p>
 						<TABLE>
 							<TR>
 							<TD> <img src="images/masculino.png"
@@ -154,52 +201,86 @@
                                 id="img7" onclick="Click(event)"> </TD>
 							<TD> <img src="images/hombreEnfAuto.png"
                                 id="img8" onclick="Click(event)"> </TD>
-							</TR>
-							<TR>
-							<TD> <img src="images/hombrePort.png"
-                                id="img9" onclick="Click(event)"></TD>
-							</TR>
-						</TABLE>
-						<hr>
-						<TABLE>
-							<TR>
+                                <TD> <img src="images/hombrePort.png"
+                                    id="img9" onclick="Click(event)"></TD>
 							<TD> <img src="images/femenino.png"
                                 id="img10" onclick="Click(event)"> </TD>
 							<TD> <img src="images/mujerMuerta.png"
                                 id="img11" onclick="Click(event)"> </TD>
 							<TD> <img src="images/mujerEnfAuto.png"
                                 id="img12" onclick="Click(event)"> </TD>
-							</TR>
-							<TR>
-							<TD> <img src="images/mujerPort.png"
+                            </tr>
+                            <tr>    
+                            <TD> <img src="images/mujerPort.png"
                                 id="img13" onclick="Click(event)"></TD>
 							<TD> <img src="images/embarazo.png"
                                 id="img14" onclick="Click(event)"></TD>
-							</TR>
-						</TABLE>
-						<hr>
-						<TABLE>
-							<TR>
 							<TD> <img src="images/enfermedadCX.png"
                                 id="img15" onclick="Click(event)"> </TD>
-							<TD> <img src="images/propositum.png"
+                            <TD> <img src="images/propositum.png"
                                 id="img16" onclick="Click(event)"> </TD>
-							<TD> <img src="images/adopcion.png"
+                            <TD> <img src="images/adopcion.png"
                                 id="img17" onclick="Click(event)"> </TD>
-							</TR>
-							<TR>
-							<TD> <img src="images/gemelosDic.png"
-                                id="img18" onclick="Click(event)"></TD>
-							<TD> <img src="images/gemelosMon.png"
-                                id="img19" onclick="Click(event)"></TD>
 							<TD> <img src="images/abortoEsp.png"
                                 id="img20" onclick="Click(event)"></TD>
 							</TR>
 						</TABLE>
+                        <hr>
+                        <p>Nombre y número</p>
+                        <form>
+                            <table>
+                                <tr>
+                                    <td> <input id="nombreP" type="text" style="width: 100px; height: 30px;" placeholder="Nombre">
+                                        
+                                    <td> <input id="numeroP" type="text" style="width: 50px; height: 30px; margin-left: 10px;" placeholder="#">
+                                        <input type="button" value="OK" onclick="numero()"></td>
+                                </tr>
+                            </table>
+                           
+                        </form>
+                        <hr>
+                        <p>Uniones</p>
+                        <TABLE>
+							<TR>
+							<TD> <img src="images/linea.png"  
+									 	id="img21" onclick="Click(event)"> </TD>
+							<TD> <img src="images/lineaSeg.png"
+										id="img22" onclick="Click(event)"> </TD>
+                            </TR>
+                            <tr>
+                            <TD> <img src="images/lineaDoble.png"  
+                                        id="img23" onclick="Click(event)"> </TD>
+							<TD> <img src="images/lineaDiv.png"
+										id="img24" onclick="Click(event)"> </TD>
+							</TR>
+							<TR>
+							<TD> <img src="images/linea90.png"
+										id="img25" onclick="Click(event)"></TD>
+                            <TD> <img src="images/lineaT.png"
+										id="img26" onclick="Click(event)"></TD>
+							</TR>
+                            <tr>
+                                <TD> <img src="images/linea2.png"
+                                    id="img27" onclick="Click(event)"></TD>
+                            </tr>
+						</TABLE>
+                        <hr>
+                        <p>Borrar - Arrastra la imagen aqui.
+                            <div id="borrar" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 100px; height: 30px; 	border: 1px solid black;
+                            border-width: 1px;"></div>
+                        </p>
+                        <hr>
 					</div >
-
-					<div class="mesaTrabajo" id="div1" >
-
+                    <div style="    float: left;                   width: 44px;
+                                    height: 602px;                 margin-left: 19px;
+                                    margin-top: 10px;              background-color: #ffe007;">                    
+                        <p style="    margin: 65px 18px; font-family: 'Times New Roman'; font-size: 40px;">I</p>
+                        <hr>
+                        <p style="    margin: 65px 9px; font-family: 'Times New Roman'; font-size: 40px;">II</p>
+                        <hr>
+                        <p style="    margin: 65px 2px; font-family: 'Times New Roman'; font-size: 40px;">III</p>
+                    </div>
+					<div class="mesaTrabajo" id="div1">
 					</div>
                 </div>	
             </div>
