@@ -86,7 +86,7 @@ function ejercicio(){
         R3CL.style.backgroundColor = "green";
         }
         else{
-        R3CL.textContent = "Incorrecto: ¼ de los hijos  tendrán ojos azules y 75% de los hijos tendrán ojos negros."
+        R3CL.textContent = "Incorrecto: ¼ de los hijos  tendrán ojos azules y 3/4 de los hijos tendrán ojos negros."
         R3CL.style.width = "600px";
         R3CL.style.borderRadius = "6px";
         R3CL.style.backgroundColor = "red";
